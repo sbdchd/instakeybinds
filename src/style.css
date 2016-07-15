@@ -1,0 +1,24 @@
+.highlight {
+  background-color:rgb(255, 234, 0);
+}
+
+.modal_keybinds {
+  bottom: auto;
+  height: auto;
+  overflow: visible;
+  overflow-y: visible;
+  padding-bottom: 10px;
+  top: 40%;
+}
+
+.modal td:nth-of-type(2) {
+  padding-left: 10px;
+}
+
+.modal td:first-child{
+  text-transform: capitalize
+}
+
+.modal_keybinds > .modal_group {
+  margin-bottom: 10px;
+}

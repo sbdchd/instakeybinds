@@ -1,0 +1,23 @@
+{
+  "name": "instakeybinds",
+  "version": "1.0.0",
+  "description": "a bookmarklet / browser extension that addeds keybinds to Instapaper",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "bookmarkletter": "^0.1.1",
+    "css-loader": "^0.23.1",
+    "pug-html-loader": "^1.0.5",
+    "pug-load": "^2.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
+  },
+  "scripts": {
+    "build": "make all",
+    "webpack": "webpack"
+  },
+  "author": "Steve Dignam",
+  "license": "MIT"
+}

@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "instakeybinds",
+  "description": "Keybinds for Instapaper",
+  "version": "1.0.0",
+  "author": "Steve Dignam",
+
+  "homepage_url": "https://github.com/sbdchd/instakeybinds",
+
+  "content_scripts": [
+      {
+          "matches": ["*://www.instapaper.com/*"],
+          "js": ["bundle.js"]
+      }
+  ],
+
+  "icons": {
+      "128": "128icon.png",
+      "48": "48icon.png",
+      "16": "16icon.png"
+  },
+
+  "permissions": ["*://www.instapaper.com/*"]
+}
+

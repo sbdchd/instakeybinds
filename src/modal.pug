@@ -1,0 +1,32 @@
+#keybinds_modal.modal.modal_keybinds
+  .modal_name Keybinds Help
+  .modal_close ✕
+  .modal_group
+    table
+        thead
+          tr
+            th Function
+            th Key
+        tbody
+          -
+            keybinds = {
+                        'next article': 'j',
+                        'previous article': 'k',
+                        'open original link': 'o',
+                        'open original link in new tab': 'n',
+                        'open instapaper version': 'enter',
+                        'select': 'x',
+                        'delete': 'd',
+                        'archive / restore': 'a',
+                        'share': 's',
+                        'edit': 'e',
+                        'search': '/',
+                        'like': 'l',
+                        'change theme': 't',
+                        'help menu': ','
+                       }
+          each key, func in keybinds
+            tr
+              td= func
+              td
+                code= key

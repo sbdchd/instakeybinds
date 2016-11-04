@@ -134,6 +134,12 @@ const nav = navigation();
 document.addEventListener('keydown', ev => {
     ev.preventDefault;
 
+    // don't enable keybinds when input sections like the search bar, add url
+    // modal, etc. are enabled
+    if (document.activeElement.tagName.toLowerCase() !== 'body') {
+        return;
+    }
+
     const is_key = k => ev.keyCode === k;
 
     // shift + <any_key> doesn't work because clicking + shift results in the

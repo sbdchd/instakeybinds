@@ -1,7 +1,8 @@
 safari_dir := ./dist/instakeybinds.safariextension
 chrome_firefox_dir := ./dist/chrome_firefox_extension
+src_zip_dir := ./dist/src_zip_dir
 
-all: chrome_firefox_extension safari_extension bookmarklet
+all: chrome_firefox_extension safari_extension bookmarklet src_zip
 
 install:
 	npm install
@@ -11,6 +12,17 @@ clean:
 
 bundle:
 	npm run webpack
+
+src_zip: bundle
+	mkdir -p                     $(src_zip_dir)
+	cp    -R                     src/* $(src_zip_dir)
+	cp    package.json           $(src_zip_dir)
+	cp    Makefile               $(src_zip_dir)
+	cp    webpack.config.js      $(src_zip_dir)
+	cd    $(src_zip_dir)         &&    \
+	zip   src.zip                *     && \
+	cd    -
+	mv    $(src_zip_dir)/src.zip ./dist/
 
 # Note: chrome and firefox use the same files
 chrome_firefox_extension: bundle
